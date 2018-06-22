@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_8</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button id="submit" name="submit" onclick="calculAge()";>Valider</button>
+            <script>
+            //declaration de fonction
+            function calculAge () {
+                var age = document.getElementById('age').value;
+                var regex = /^[0-9]+$/;
+                if(regex.test(age) && (age >= 18)){
+                 // on compare l'age : s'il est superieur ou egal à 18 ans, alors le visiteur est majeur
+                    alert('Vous êtes majeur');
+                  } else {
+                    alert('Vous êtes mineur');
+                  }
+                }
+                </script>
+        </form>
+    </body>
+</html>
